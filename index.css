@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+  }
+  
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+header div{
+    margin: 5px;
+    padding: 5px;
+}
+
+main{
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.userProfile,
+.chat{
+    width: 1.5em;
+}
+.logo{
+    width: 5em;
+}
+
+.profile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%), url('images/dog-teddy.jpg');
+    object-fit: cover;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+
+
+.name{
+    position: absolute;
+    bottom: 38px;
+    left: 16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    color: #F8F8F8;
+}
+
+.bio{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #B7B7B7;
+}
+
+.voteButtons{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.cross,
+.heart {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    border-radius: 50%;
+    border: 0;
+    width: 92px;
+    height: 92px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.cross:hover,
+.cross:focus{
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+.heart:hover,
+.heart:focus {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+#liked{
+    display: none;
+    position: absolute;
+    padding: 5px 20px;
+    top: 50px;
+    left: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 84.8341px;
+    line-height: 95px;
+    text-align: center;
+    color: #29D78A;
+    border: 16px solid #29D78A; 
+    border-image: linear-gradient(to right, #29D78A , #6EF2F2) 1;
+    text-transform: uppercase;
+    transform: rotate(-30deg);
+}
+
+#nope{
+    display: none;
+    position: absolute;
+    padding: 5px 20px;
+    top: 70px;
+    left: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 84.8341px;
+    line-height: 95px;
+    text-align: center;
+    color: #F9655C;
+    border: 16px solid #29D78A; 
+    border-image: linear-gradient(to right, #F9655C, #F83574) 1;
+    text-transform: uppercase;
+    transform: rotate(-30deg);
+}
+
+#your-candidates{
+    display: none;
+    
+}
+
+#result{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+}
+
+#hot-dogs{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    max-width: 100%;
+    justify-content: space-evenly;
+    font-size: 30px;
+    color: #29D78A;
+    font-weight: 600;
+    border: 6px solid #29D78A;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+#thumbnail{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+@media(max-width:750px){
+
+    #your-candidates{
+        margin: 8px;
+    }
+    #hot-dogs{
+        display: flex;
+        flex-direction: column;
+    }
+    #thumbnail{
+        max-width: 80%;
+        max-height: 80%;
+    }
+    #hot-dogs div{
+        border-bottom: 1px solid #29D78A;
+        margin-top: 10px;
+    }
+
+    #hot-dogs div:last-child{
+        border: 0;
+    }
+
+}
